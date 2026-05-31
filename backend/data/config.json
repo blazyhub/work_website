@@ -58,8 +58,8 @@
   "adminPassword": "admin123",
   "jwtSecret": "dealhunt-super-secret-jwt-key-2026",
   "dealOfDayProductId": "",
-  "dealOfDayEndsAt": "2026-06-01T00:00:00Z",
-  "footerText": "© 2026 DealHunt. All product prices and availability are subject to change.",
+  "dealOfDayEndsAt": "2026-06-01T00:00:00.000Z",
+  "footerText": "",
   "socialLinks": {
     "instagram": "",
     "telegram": "",
