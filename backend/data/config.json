@@ -1,0 +1,69 @@
+{
+  "siteName": "DealHunt",
+  "tagline": "Best Deals. Top Brands. Unbeatable Prices.",
+  "heroTitle": "Shop Smarter, Save Bigger",
+  "heroSubtitle": "Curated affiliate deals from Amazon, Flipkart, Meesho & more — hand-picked for maximum savings.",
+  "heroCTA": "Explore Deals",
+  "announcement": "🎉 Mega Sale Live! Up to 70% Off on Electronics, Fashion & More!",
+  "platforms": [
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "color": "#FF9900",
+      "textColor": "#000",
+      "icon": "🔶",
+      "active": true
+    },
+    {
+      "id": "flipkart",
+      "name": "Flipkart",
+      "color": "#2874F0",
+      "textColor": "#fff",
+      "icon": "🔵",
+      "active": true
+    },
+    {
+      "id": "meesho",
+      "name": "Meesho",
+      "color": "#9B2D8E",
+      "textColor": "#fff",
+      "icon": "🟣",
+      "active": true
+    },
+    {
+      "id": "myntra",
+      "name": "Myntra",
+      "color": "#FF3F6C",
+      "textColor": "#fff",
+      "icon": "🩷",
+      "active": true
+    },
+    {
+      "id": "ajio",
+      "name": "Ajio",
+      "color": "#E8001C",
+      "textColor": "#fff",
+      "icon": "🔴",
+      "active": true
+    },
+    {
+      "id": "nykaa",
+      "name": "Nykaa",
+      "color": "#FC2779",
+      "textColor": "#fff",
+      "icon": "💗",
+      "active": true
+    }
+  ],
+  "adminPassword": "admin123",
+  "jwtSecret": "dealhunt-super-secret-jwt-key-2026",
+  "dealOfDayProductId": "",
+  "dealOfDayEndsAt": "2026-06-01T00:00:00Z",
+  "footerText": "© 2026 DealHunt. All product prices and availability are subject to change.",
+  "socialLinks": {
+    "instagram": "",
+    "telegram": "",
+    "youtube": "",
+    "twitter": ""
+  }
+}

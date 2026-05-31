@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DealHunt Admin — Login</title>
+  <link rel="stylesheet" href="/css/admin.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>" />
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">DealHunt</div>
+    <div class="login-subtitle">Developer Control Panel</div>
+    <h2>Admin Login</h2>
+    <div id="login-error" class="alert alert-danger" style="display:none"></div>
+    <div class="form-group">
+      <label class="form-label" for="login-password">Admin Password</label>
+      <input type="password" id="login-password" class="form-control" placeholder="Enter your admin password" autocomplete="current-password" />
+    </div>
+    <button class="btn btn-primary btn-lg btn-block" id="login-btn" onclick="doLogin()">Sign In →</button>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script src="/js/api.js"></script>
+<script>
+  // If we are on the login page, it means our session is either expired,
+  // invalid, or we logged out. Clear the local storage token to prevent redirect loops.
+  localStorage.removeItem('dh_admin_token');
+
+  document.getElementById('login-password').addEventListener('keydown', e => {
+    if (e.key === 'Enter') doLogin();
+  });
+
+  async function doLogin() {
+    const pw = document.getElementById('login-password').value;
+    const btn = document.getElementById('login-btn');
+    const err = document.getElementById('login-error');
+    err.style.display = 'none';
+    btn.textContent = 'Signing in...';
+    btn.disabled = true;
+
+    try {
+      const data = await api.login(pw);
+      if (data.success) {
+        localStorage.setItem('dh_admin_token', data.token);
+        window.location.href = '/admin';
+      } else {
+        err.textContent = data.error || 'Invalid password.';
+        err.style.display = 'block';
+      }
+    } catch (e) {
+      err.textContent = 'Cannot connect to server. Is the backend running?';
+      err.style.display = 'block';
+    } finally {
+      btn.textContent = 'Sign In →';
+      btn.disabled = false;
+    }
+  }
+</script>
+</body>
+</html>

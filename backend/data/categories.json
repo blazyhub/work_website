@@ -1,0 +1,11 @@
+{
+  "categories": [
+    { "id": "cat-001", "name": "Electronics", "icon": "💻", "active": true },
+    { "id": "cat-002", "name": "Fashion", "icon": "👗", "active": true },
+    { "id": "cat-003", "name": "Home & Kitchen", "icon": "🏠", "active": true },
+    { "id": "cat-004", "name": "Beauty", "icon": "💄", "active": true },
+    { "id": "cat-005", "name": "Sports", "icon": "⚽", "active": true },
+    { "id": "cat-006", "name": "Books", "icon": "📚", "active": true },
+    { "id": "cat-007", "name": "Toys", "icon": "🧸", "active": true }
+  ]
+}
